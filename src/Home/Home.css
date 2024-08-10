@@ -1,0 +1,535 @@
+.HomePageVideo
+{
+        max-width: 100%;
+        max-height: auto;
+        overflow: hidden;
+
+}
+.divForVideoHomePage
+{
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+
+}
+
+/* "Cards" */
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+
+
+.page-content {
+    display: grid;
+    grid-gap: 44px;
+    padding: 1rem;
+    max-width: 86%;
+    margin: 80px auto;
+    font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.page-content .card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+    .page-content .card {
+    height: 453px;
+  }
+}
+.page-content .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.page-content .card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.page-content .card:nth-child(1):before {
+  background-image: url(https://images.pexels.com/photos/10762320/pexels-photo-10762320.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.page-content .card:nth-child(2):before {
+  background-image: url(https://images.pexels.com/photos/3907152/pexels-photo-3907152.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+}
+.page-content .card:nth-child(3):before {
+  background-image: url(https://images.pexels.com/photos/25451592/pexels-photo-25451592/free-photo-of-passenger-ship-in-bay-among-mountains.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.page-content .card:nth-child(4):before {
+  background-image: url(https://images.pexels.com/photos/5745374/pexels-photo-5745374.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+
+.page-content .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.page-content .content > * + * {
+  margin-top: 1rem;
+}
+
+.page-content .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.page-content .copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.page-content .btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.page-content .btn:hover {
+  background-color: #0d0d0d;
+}
+.page-content .btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+    .page-content .card:after {
+    transform: translateY(0);
+  }
+
+  .page-content .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .page-content .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .page-content .card:hover,
+  .page-content .card:focus-within {
+    align-items: center;
+  }
+  .page-content .card:hover:before,
+  .page-content .card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .page-content .card:hover:after,
+  .page-content .card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .page-content .card:hover .content,
+  .page-content .card:focus-within .content {
+    transform: translateY(0);
+  }
+  .page-content .card:hover .content > *:not(.title),
+  .page-content .card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .page-content .card:focus-within:before,.page-content .card:focus-within:after,
+  .page-content .card:focus-within .content,
+  .page-content .card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+
+.indianTravelActivitiesDiv
+{
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/1128797/pexels-photo-1128797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /* https://images.pexels.com/photos/13289659/pexels-photo-13289659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
+    /* background-image: url(
+       
+      
+    https://images.pexels.com/photos/3994554/pexels-photo-3994554.jpeg?auto=compress&cs=tinysrgb&w=600
+      
+      
+      
+      ); */
+
+    margin: 70px;
+    /* width: 100%; */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    /* background-attachment: scroll; */
+    flex-direction: column;
+    padding: 77px;
+    /* object-fit: cover; */
+}
+.indianTravelActivitiesDivinnerText
+{
+    width: 39%;
+    justify-content: center;  
+}
+.indianTravelActivitiesDivinnerText h3
+{
+    font-size: 50px;
+}
+.indianTravelActivitiesDivinnerText p
+{
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+body, html {
+    font-family: 'Roboto Slab', serif;
+     margin: 0;
+   width: 100%;
+ height: 100%;
+     padding: 0;
+ }
+
+/* NorthEastCards */
+
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i'); */
+
+/* *{
+  box-sizing: border-box;
+} */
+/* 
+
+
+body {
+  background-color: #D2DBDD;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+} */
+
+.northEastCards .cards {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    max-width: 100%;
+}
+
+.northEastCards  .card--1 .card__img, .card--1 .card__img--hover {
+    background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+}
+
+.northEastCards .card--2 .card__img, .card--2 .card__img--hover {
+    background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+}
+
+.card__like {
+    width: 18px;
+}
+
+.northEastCards  .card__clock {
+    width: 15px;
+  vertical-align: middle;
+    fill: #AD7D52;
+}
+.northEastCards  .card__time {
+    font-size: 12px;
+    color: #AD7D52;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.northEastCards  .card__clock-info {
+    float: right;
+}
+
+.northEastCards  .card__img {
+  visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+  
+}
+
+.northEastCards  .card__info-hover {
+    position: absolute;
+    padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.northEastCards  .card__img--hover {
+  transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  position: absolute;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+  
+}
+.northEastCards  .card {
+  margin-right: 50px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+    width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+}
+.northEastCards  .card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.northEastCards  .card__info {
+z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+border-bottom-right-radius: 12px;
+   padding: 16px 24px 24px 24px;
+}
+
+.northEastCards  .card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  color: #868686;
+}
+
+.northEastCards  .card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+.northEastCards  .card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.northEastCards  .card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.northEastCards  .card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.northEastCards  .card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.northEastCards  .card:hover .card__info-hover {
+    opacity: 1;
+}
+.northEastCards 
+{
+    margin: 32px 0px;
+}
+.setWidth
+{
+    margin: 60px 100px;
+}
+.northIndiaModal
+{
+  margin: 70px;
+}
+
+/* carousel */
+#carouselExampleInterval
+{
+  max-width: 100%;
+  width: 100%;
+
+}
+#carouselExampleInterval2
+{
+  max-width: 100%;
+  width: 100%;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+figure.snip1177 {
+  position: relative;
+  border-radius: 53px 3px;
+  overflow: hidden;
+  margin: 40px;
+  /* min-width: 242px; */
+  min-width: 372px;
+  max-width: 372px;
+  height: 372px;
+  max-height: 372px;
+  /* width: 100%; */
+  background: #000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+ figure.snip1177 * {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+figure.snip1177 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+figure.snip1177 div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: table;
+  padding: 0 20px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+figure.snip1177 div:before,
+figure.snip1177 div:after {
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 100%;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+figure.snip1177 div:before {
+  right: -150%;
+}
+figure.snip1177 div:after {
+  left: -150%;
+}
+figure.snip1177 h3 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0;
+}
+figure.snip1177 h3 span {
+  font-weight: 800;
+  display: block;
+}
+figure.snip1177 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+figure.snip1177:hover img,
+figure.snip1177.hover img {
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+figure.snip1177:hover h3,
+figure.snip1177.hover h3 {
+  opacity: 1;
+}
+figure.snip1177:hover div,
+figure.snip1177.hover div {
+  opacity: 1;
+}
+figure.snip1177:hover div:before,
+figure.snip1177.hover div:before,
+figure.snip1177:hover div:after,
+figure.snip1177.hover div:after {
+  width: 150%;
+}
+
+.carousel-control-prev {
+  left: -55px;
+    display: block;
+    width: 97px;
+}
+.carousel-control-next {
+  right:-55px;
+  display: block;
+  width: 97px;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon {
+  width: 47px;
+  height: 47px;
+
+}
