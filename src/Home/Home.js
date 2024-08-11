@@ -28,10 +28,10 @@ export default function Home()
         stateName:"Assam",
         url:"https://www.ibef.org/assets/images/states/Assam-2.jpg"
       },
-      {
-        stateName:"Manipur",
-        url:"https://www.thestatesman.com/wp-content/uploads/2021/07/QT-Manipur.jpg"
-      },
+      // {
+      //   stateName:"Manipur",
+      //   url:"https://www.thestatesman.com/wp-content/uploads/2021/07/QT-Manipur.jpg"
+      // },
       {
         stateName:"Nagaland",
         url:"https://www.tourmyindia.com/blog//wp-content/uploads/2016/10/Panoramic-Beauty-of-Nagaland.jpg"
@@ -57,6 +57,27 @@ export default function Home()
       },
       
     ]
+
+    const activitiesConst=[
+      {
+        name:"Paragliding",
+        url:"https://images.pexels.com/photos/10762320/pexels-photo-10762320.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        name:"Biking",
+        url:"https://images.pexels.com/photos/3907152/pexels-photo-3907152.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+      },
+      {
+        name:"Cruise",
+        url:"https://images.pexels.com/photos/25451592/pexels-photo-25451592/free-photo-of-passenger-ship-in-bay-among-mountains.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        name:"Safari",
+        url:"https://images.pexels.com/photos/5745374/pexels-photo-5745374.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      
+    ]
+
     return(
         <>
         
@@ -70,120 +91,67 @@ export default function Home()
             </video>
             
         </div>
-        <div className='cardsDiv'>
-               
-        <main class="page-content">
-          <div class="card">
-            <div class="content">
-              <h2 class="title">Paragliding </h2>
-              <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
-              <button class="btn">View Trips</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <h2 class="title">Biking</h2>
-              <p class="copy">Plan your next beach trip with these fabulous destinations</p>
-              <button class="btn">View Trips</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <h2 class="title">Cruise </h2>
-              <p class="copy">It's the desert you've always dreamed of</p>
-              <button class="btn">Book Now</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <h2 class="title">Safari</h2>
-              <p class="copy">Seriously, straight up, just blast off into outer space today</p>
-              <button class="btn">Book Now</button>
-            </div>
-          </div>
-        </main>
-
+        <div className='cardsDiv'>          
+          <div class="row p-0 m-0">
+            {/* <div class="card-holder"> */}
+            {
+              activitiesConst.map((item)=>
+                <div class="col-lg-3 col-12 card border-0">
+                <img class="card-img-top" src={item?.url} alt="Card image cap"/>
+                <div class="card-body pt-3">
+                  <h4 class="card-title"><b>{item?.name}</b></h4>
+                </div>
+                </div>
+              )
+            }
+         </div>
         </div>
 
         {/* <div className=''> */}
         <div className='indianTravelActivitiesDiv'>
           <div className='indianTravelActivitiesDivinnerText row'>
             <h3>Indian Travel Activities In One Place</h3>
-            <p>Click the images of the Regions below of your choice and select actrivities....</p>
-            <h2>North-East India</h2>
+            {/* <p>Click the images of the Regions below of your choice and select actrivities....</p> */}
+            
           </div>
-              <div id="carouselExampleInterval"  class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="10000">
-                  <div className='d-flex justify-content-center'> 
-                    {northEastStates.slice(0,3).map((data)=>
-                         <figure class="snip1177">
-                          <img src={data?.url}/>
-                          <div>
-                            <h3>{data?.stateName}</h3>
-                          </div><a href="#"></a>
-                        </figure>
+          </div>
+          <h2 className='w-100'>North-East India</h2>
+          {/* <hr className='ml-4 mr-4'></hr> */}
+          <div className='row p-0 m-5 cardsDiv2 justify-content-start'> 
+                    {northEastStates.map((data)=>
+                        //  <figure class="snip1177">
+                        //   <img src={data?.url}/>
+                        //   <div>
+                        //     <h3>{data?.stateName}</h3>
+                        //   </div><a href="#"></a>
+                        // </figure>
+                         <div class="col-lg-4 card border-0">
+                         <img class="card-img-top" src={data?.url} alt="Card image cap"/>
+                         <div class="card-body pt-3">
+                           <h4 class="card-title"><b>{data?.stateName}</b></h4>
+                         </div>
+                         </div>
                     )}
 
-                  </div>
-                </div>
-                <div class="carousel-item " data-interval="10000">
-                  <div className='d-flex justify-content-center'> 
-                  {northEastStates.slice(3,6).map((data)=>
-                         <figure class="snip1177">
-                         <img src={data?.url}/>
-                         <div>
-                           <h3>{data?.stateName}</h3>
-                         </div><a href="#"></a>
-                     </figure>
-                    )}
-                  </div> 
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
-                <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
-              </div>
           </div>
           
            
              
       
-        <div className='northIndiaModal'>
+        <div className='northIndiaModal ml-0 mr-0'>
             <h2>North India</h2>
-            <div id="carouselExampleInterval2"  class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="5000000">
-                  <div className='d-flex justify-content-center'> 
+            {/* <hr className='ml-4 mr-4'></hr> */}
+            <div className='row p-0 m-5 cardsDiv2 justify-content-around'> 
                     {northIndiaStates.slice(0,3).map((data)=>
-                         <figure class="snip1177">
-                          <img src={data?.url}/>
-                          <div>
-                            <h3>{data?.stateName}</h3>
-                          </div><a href="#"></a>
-                        </figure>
+                         <div class="col-lg-4 card border-0">
+                          <img class="card-img-top" src={data?.url} alt="Card image cap"/>
+                          <div class="card-body pt-3">
+                           <h4 class="card-title"><b>{data?.stateName}</b></h4>
+                         </div>
+                        </div>
                     )}
 
-                  </div>
-                </div>
-                <div class="carousel-item " data-interval="5000000">
-                  <div className='d-flex justify-content-center'> 
-                  {northIndiaStates.slice(3,6).map((data)=>
-                         <figure class="snip1177">
-                         <img src={data?.url}/>
-                         <div>
-                           <h3>{data?.stateName}</h3>
-                         </div><a href="#"></a>
-                     </figure>
-                    )}
-                  </div> 
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval2" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
-                <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval2" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
-              </div>       
-
-          
-           
+            </div> 
         </div>
        
 

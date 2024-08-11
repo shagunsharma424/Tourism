@@ -3,17 +3,17 @@ export default function Header()
 {
     return(
        <>       
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top justify-content-center justify-content-xl-start navbarHeader">
-            <div class="container m-0 backgrounGifyImage d-flex justify-content-between" > 
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top navbarHeader">
+            <div class="row m-0 backgrounGifyImage d-flex justify-content-between w-100" > 
             <a class="navbar-brand " href="#">
-            <span class="ml-3 font-weight-bold">BRAND</span>
+            <span class="ml-3 font-weight-bold">Tourist.</span>
             </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
             <span class="navbar-toggler-icon"></span>
             </button>
 
 
             <div class="collapse navbar-collapse" id="navbar4">
-                <ul class="navbar-nav mr-auto pl-lg-4">
+                <ul class="navbar-nav ml-auto pl-lg-4">
                 {/* <li class="nav-item px-lg-2 dropdown d-menu">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Dropdown
                 <svg  id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -26,7 +26,7 @@ export default function Header()
                 <a class="dropdown-item" href="#">Something else here</a>
                 </div>
                 </li> */}
-
+                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Food</a> </li>
                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Camping</a> </li>
                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Spa</a> </li>
                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>About</a> </li>

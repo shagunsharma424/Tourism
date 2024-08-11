@@ -53,11 +53,14 @@
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
+  border-radius: 18px;
+  border-style: hidden;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 600px) {
     .page-content .card {
-    height: 453px;
+    height: 338px;
+    cursor: pointer;
   }
 }
 .page-content .card:before {
@@ -81,7 +84,7 @@
   width: 100%;
   height: 200%;
   pointer-events: none;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%); */
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
 }
@@ -99,6 +102,7 @@
 }
 
 .page-content .content {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -165,7 +169,7 @@
   }
   .page-content .card:hover:before,
   .page-content .card:focus-within:before {
-    transform: translateY(-4%);
+    transform: scale(1.1);
   }
   .page-content .card:hover:after,
   .page-content .card:focus-within:after {
@@ -192,8 +196,12 @@
 
 .indianTravelActivitiesDiv
 {
-    min-height: 100vh;
-    background-image: url(https://images.pexels.com/photos/1128797/pexels-photo-1128797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /* min-height: 100vh; */
+    /* https://images.pexels.com/photos/1128797/pexels-photo-1128797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
+    background-image: url(
+      https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+      );
+ 
     /* https://images.pexels.com/photos/13289659/pexels-photo-13289659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
     /* background-image: url(
        
@@ -204,9 +212,9 @@
       
       ); */
 
-    margin: 70px;
+    margin: 60px;
     /* width: 100%; */
-    background-size: cover;
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,16 +227,18 @@
 }
 .indianTravelActivitiesDivinnerText
 {
-    width: 39%;
+    width: 90%;
     justify-content: center;  
 }
 .indianTravelActivitiesDivinnerText h3
 {
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: 600;
 }
 .indianTravelActivitiesDivinnerText p
 {
     font-size: 13px;
+    display: block;
     text-decoration: underline;
 }
 
@@ -422,16 +432,17 @@ border-bottom-right-radius: 12px;
 
 }
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+
 figure.snip1177 {
   position: relative;
   border-radius: 53px 3px;
   overflow: hidden;
-  margin: 40px;
+  margin: 25px;
   /* min-width: 242px; */
-  min-width: 372px;
-  max-width: 372px;
-  height: 372px;
-  max-height: 372px;
+  min-width: 350px;
+  max-width: 351px;
+  height: 353px;
+  max-height: 357px;
   /* width: 100%; */
   background: #000000;
   text-align: center;
@@ -532,4 +543,36 @@ figure.snip1177.hover div:after {
   width: 47px;
   height: 47px;
 
+}
+.cardsDiv
+{
+  margin: 70px 40px;
+}
+.cardsDiv img
+{
+  height: 213px;
+  object-fit: cover;
+  border-radius: 9px;
+  transition: all 0.4s;
+  cursor: pointer;
+
+}
+.cardsDiv img:hover
+{
+  transform: scale(1.05);
+}
+
+.cardsDiv2 img:hover
+{
+  transform: scale(1.05);
+}
+
+.cardsDiv2 img
+{
+    height: 253px;
+    object-fit: cover;
+    border-radius: 9px;
+    transition: all 0.4s;
+    cursor: pointer;
+    width: 100%;
 }
