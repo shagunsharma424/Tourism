@@ -115,7 +115,7 @@ export default function Home()
             {/* <div class="card-holder"> */}
             {
               activitiesConst.map((item)=>
-                <div class="col-lg-3 col-12 card border-0">
+                <div class="col-lg-4 col-12 col-md-6 col-xl-3 card border-0">
                 <img class="card-img-top m-auto" src={`./HomePage${item?.url}`} alt="Card image cap"/>
                 <div class="card-body pt-3">
                   <h4 class="card-title"><b>{item?.name}</b></h4>

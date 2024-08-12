@@ -13,7 +13,7 @@ export default function Header()
 
 
             <div class="collapse navbar-collapse" id="navbar4">
-                <ul class="navbar-nav ml-auto pl-lg-4">
+                <ul class="navbar-nav ml-auto ">
                 {/* <li class="nav-item px-lg-2 dropdown d-menu">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-caret-square-down"></i></span>Dropdown
                 <svg  id="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
