@@ -14,46 +14,46 @@ export default function Home()
     const northEastStates=[
       {
         stateName:"Meghalya",
-        url:"https://images.pexels.com/photos/11622977/pexels-photo-11622977.jpeg?auto=compress&cs=tinysrgb&w=600"
+        url:"/meghalya.jpg"
       },
       {
         stateName:"Nagaland",
-        url:"https://www.tourmyindia.com/blog//wp-content/uploads/2016/10/Panoramic-Beauty-of-Nagaland.jpg"
+        url:"/Himachal.jpg"
       },
       {
         stateName:"Arunachal Pradesh",
-        url:"https://assets-news.housing.com/news/wp-content/uploads/2022/08/19190505/ARUNACHAL-PRADESH-FEATURE-compressed.jpg"
+         url:"/arunachal.jpg"
       },
       {
         stateName:"Assam",
-        url:"https://www.ibef.org/assets/images/states/Assam-2.jpg"
+        url:"/assam.jpg"
       },
       // {
       //   stateName:"Manipur",
       //   url:"https://www.thestatesman.com/wp-content/uploads/2021/07/QT-Manipur.jpg"
       // },
-      {
-        stateName:"Nagaland",
-        url:"https://www.tourmyindia.com/blog//wp-content/uploads/2016/10/Panoramic-Beauty-of-Nagaland.jpg"
-      },
+      // {
+      //   stateName:"Nagaland",
+      //   url:"/Himachal.jpg"
+      // },
       
     ]
     const northIndiaStates=[
       {
         stateName:"Ladakh",
-        url:"https://www.holidify.com/images/bgImages/LADAKH.jpg"
+        url:"/Ladakh.jpg"
       },
       {
         stateName:"Himachal Pradesh",
-        url:"https://t4.ftcdn.net/jpg/04/70/76/19/360_F_470761995_6ru1SxTV2KCienxwZ5H2U8gZrqJH0fiI.jpg"
+        url:"/Himachal.jpg"
       },
       {
         stateName:"Uttarakhand",
-        url:"https://static.toiimg.com/thumb/msid-98447982,width-748,height-499,resizemode=4,imgsize-168488/.jpg"
+       url:"/Himachal.jpg"
       },
       {
         stateName:"Kashmir",
-        url:"https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc="
+       url:"/Kashmir.jpg"
       },
       
     ]
@@ -61,19 +61,35 @@ export default function Home()
     const activitiesConst=[
       {
         name:"Paragliding",
-        url:"https://images.pexels.com/photos/10762320/pexels-photo-10762320.jpeg?auto=compress&cs=tinysrgb&w=600"
+        url:"/Paraglidingbooking.jpg"
       },
       {
         name:"Biking",
-        url:"https://images.pexels.com/photos/3907152/pexels-photo-3907152.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        url:"/bike.jpg"
       },
       {
-        name:"Cruise",
-        url:"https://images.pexels.com/photos/25451592/pexels-photo-25451592/free-photo-of-passenger-ship-in-bay-among-mountains.jpeg?auto=compress&cs=tinysrgb&w=600"
+        name:"River Boating",
+         url:"/Boating.jpeg"
       },
       {
         name:"Safari",
-        url:"https://images.pexels.com/photos/5745374/pexels-photo-5745374.jpeg?auto=compress&cs=tinysrgb&w=600"
+        url:"/safaribooking.png"
+      },
+      {
+        name:"Rafting",
+         url:"/Rafting.jpg"
+      },
+      {
+        name:"Scooba diving",
+         url:"/scuba.png"
+      },
+      {
+        name:"Fishing",
+         url:"/fishing.jpeg"
+      },
+      {
+        name:"Zip Lining",
+         url:"/Ziplining.jpg"
       },
       
     ]
@@ -81,7 +97,7 @@ export default function Home()
     return(
         <>
         
-        <div className='divForVideoHomePage'>
+        {/* <div className='divForVideoHomePage'>
             <video ref={videoRef} autoPlay loop muted  className='HomePageVideo'>
                 <source 
                 // src="https://videos.pexels.com/video-files/2894891/2894891-uhd_2560_1440_24fps.mp4"
@@ -90,6 +106,9 @@ export default function Home()
                  />
             </video>
             
+        </div> */}
+        <div className='backgrounImageFirst'>
+            <img src="./HomePage/timerLineImage.jpg"/>
         </div>
         <div className='cardsDiv'>          
           <div class="row p-0 m-0">
@@ -97,7 +116,7 @@ export default function Home()
             {
               activitiesConst.map((item)=>
                 <div class="col-lg-3 col-12 card border-0">
-                <img class="card-img-top" src={item?.url} alt="Card image cap"/>
+                <img class="card-img-top m-auto" src={`./HomePage${item?.url}`} alt="Card image cap"/>
                 <div class="card-body pt-3">
                   <h4 class="card-title"><b>{item?.name}</b></h4>
                 </div>
@@ -126,7 +145,7 @@ export default function Home()
                         //   </div><a href="#"></a>
                         // </figure>
                          <div class="col-lg-4 card border-0">
-                         <img class="card-img-top" src={data?.url} alt="Card image cap"/>
+                         <img class="card-img-top m-auto" src={`./HomePage${data?.url}`}  alt="Card image cap"/>
                          <div class="card-body pt-3">
                            <h4 class="card-title"><b>{data?.stateName}</b></h4>
                          </div>
@@ -144,7 +163,7 @@ export default function Home()
             <div className='row p-0 m-5 cardsDiv2 justify-content-around'> 
                     {northIndiaStates.slice(0,3).map((data)=>
                          <div class="col-lg-4 card border-0">
-                          <img class="card-img-top" src={data?.url} alt="Card image cap"/>
+                          <img class="card-img-top m-auto" src={`./HomePage${data?.url}`} alt="Card image cap"/>
                           <div class="card-body pt-3">
                            <h4 class="card-title"><b>{data?.stateName}</b></h4>
                          </div>

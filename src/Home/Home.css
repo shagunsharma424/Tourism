@@ -198,9 +198,10 @@
 {
     /* min-height: 100vh; */
     /* https://images.pexels.com/photos/1128797/pexels-photo-1128797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
+    /* https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
     background-image: url(
-      https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
-      );
+      https://images.pexels.com/photos/751378/pexels-photo-751378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+            );
  
     /* https://images.pexels.com/photos/13289659/pexels-photo-13289659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */
     /* background-image: url(
@@ -212,7 +213,7 @@
       
       ); */
 
-    margin: 60px;
+    margin: 60px 0px;
     /* width: 100%; */
     background-size: 100%;
     display: flex;
@@ -227,7 +228,7 @@
 }
 .indianTravelActivitiesDivinnerText
 {
-    width: 90%;
+    width: 100%;
     justify-content: center;  
 }
 .indianTravelActivitiesDivinnerText h3
@@ -550,12 +551,12 @@ figure.snip1177.hover div:after {
 }
 .cardsDiv img
 {
-  height: 213px;
-  object-fit: cover;
-  border-radius: 9px;
-  transition: all 0.4s;
-  cursor: pointer;
-
+    height: 213px;
+    object-fit: cover;
+    border-radius: 9px;
+    transition: all 0.4s;
+    cursor: pointer;
+    max-width: 83%;
 }
 .cardsDiv img:hover
 {
@@ -566,6 +567,14 @@ figure.snip1177.hover div:after {
 {
   transform: scale(1.05);
 }
+.cardsDiv .card-body
+{
+  padding: 9px 1px 10px 0px !important;
+}
+.cardsDiv .card-title
+{
+  font-size: 19px;
+}
 
 .cardsDiv2 img
 {
@@ -574,5 +583,34 @@ figure.snip1177.hover div:after {
     border-radius: 9px;
     transition: all 0.4s;
     cursor: pointer;
-    width: 100%;
+    max-width: 83%;
+}
+.backgrounImageFirst img
+{
+  
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  opacity: 0.7;
+  margin-top: 58px;
+
+}
+
+.navbar-nav img
+{
+  width: 26px;
+}
+.navbar-nav a
+{
+  color: white;
+    font-weight: 600;
+    font-size: 19px;
+    transition: all 0.6s;
+}
+.navbar-nav a:hover
+{
+  /* background: white !important; */
+  color: black !important;
+  padding: 8px 23px !important;
+  border-radius: 14px !important;
 }

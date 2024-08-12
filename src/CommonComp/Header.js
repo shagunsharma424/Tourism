@@ -6,7 +6,7 @@ export default function Header()
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top navbarHeader">
             <div class="row m-0 backgrounGifyImage d-flex justify-content-between w-100" > 
             <a class="navbar-brand " href="#">
-            <span class="ml-3 font-weight-bold">Tourist.</span>
+            <span class="ml-3 font-weight-bold">Travelactivitiesindia5@gmail.com</span>
             </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,6 +31,8 @@ export default function Header()
                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Spa</a> </li>
                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>About</a> </li>
                 <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>Contact</a> </li>
+                <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><span class="d-inline-block d-lg-none icon-width"><i class="far fa-envelope"></i></span>TravelInformation</a> </li>
+                <li class="nav-item px-lg-2"> <a class="nav-link" href="#"><img src="/whatsapp.png"/></a></li>
             </ul>
                 {/* <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
                 <li class="nav-item"> <a class="nav-link" href="#">
